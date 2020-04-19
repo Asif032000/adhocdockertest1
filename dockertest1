@@ -34,5 +34,27 @@ docker run -it --name asifhabibc3q3 --restart=always -p 5555:80 dockerashu/ckad:
 ctrl + p + q 
 
 
+# fourth question :
+
+# edited dockerfile :
+
+from centos
+maintainer asif2000nm@gmail.com
+run yum install httpd -y
+add https://github.com/redashu/beginner-html-site-styled.git  /var/www/html/index.html
+expose 80
+entrypoint httpd -DFOREGROUND
+
+
+# built image
+docker build -t asifhabib:q4 .
+
+# created container
+docker run -it --name asifhabibc4q4 --restart=always -p 5666:80  asifhabib:q4 /bin/bash -c usr/bin/httpd
+
+# question 5:
+
+
+
 
 
