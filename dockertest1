@@ -1,0 +1,38 @@
+# first question :
+
+created a dockerfile:
+
+from alpine
+maintainer asif2000nm@gmail.com
+cmd date
+
+# created an image using 
+docker build -t alpine:asifhabib .
+
+# created a container using 
+docker run -dit --name asifhabibc1q1 alpine:asifhabib date '+%X' >> question1.txt
+(i appended the date as maybe someone else date is saved there)
+
+# started container using 
+docker start asifhabibc1q1
+
+output :
+
+12:18:22
+
+#second question:
+
+docker build -t adhoc:asifhabib https://github.com/redashu/summer2020dockertest.git 
+docker tag adhoc:asifhabib asifhabib/adhoc:asifhabib
+docker push  asifhabib/adhoc:asifhabib
+
+12:48:52
+
+# third question
+docker pull dockerashu/ckad:v2
+docker run -it --name asifhabibc3q3 --restart=always -p 5555:80 dockerashu/ckad:v2 bash
+ctrl + p + q 
+
+
+
+
